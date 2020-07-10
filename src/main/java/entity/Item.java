@@ -45,23 +45,33 @@ public class Item {
 		private Set<String> keywords;
 		private String imageUrl;
 		private String url;
-		public void setItemId(String itemId) {
+		
+		public ItemBuilder() {
+		}
+		
+		public ItemBuilder setItemId(String itemId) {
 			this.itemId = itemId;
+			return this;
 		}
-		public void setName(String name) {
+		public ItemBuilder setName(String name) {
 			this.name = name;
+			return this;
 		}
-		public void setAddress(String address) {
+		public ItemBuilder setAddress(String address) {
 			this.address = address;
+			return this;
 		}
-		public void setKeywords(Set<String> keywords) {
+		public ItemBuilder setKeywords(Set<String> keywords) {
 			this.keywords = keywords;
+			return this;
 		}
-		public void setImageUrl(String imageUrl) {
+		public ItemBuilder setImageUrl(String imageUrl) {
 			this.imageUrl = imageUrl;
+			return this;
 		}
-		public void setUrl(String url) {
+		public ItemBuilder setUrl(String url) {
 			this.url = url;
+			return this;
 		}
 		public Item build() {
 			return new Item(this);
