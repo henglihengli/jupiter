@@ -12,7 +12,7 @@ public class RpcHelper {
 		response.getWriter().print(array);
 	}
 
-              // Writes a JSONObject to http response.
+    // Writes a JSONObject to http response.
 	public static void writeJsonObject(HttpServletResponse response, JSONObject obj) throws IOException {		
 		response.setContentType("application/json");
 		response.getWriter().print(obj);
