@@ -1,5 +1,10 @@
 /Users/hengli/eclipse-workspace/jupiter/src/main/java/entity/Item.java
+/Users/hengli/eclipse-workspace/jupiter/src/main/java/db/MySQLDBUtil.java
+/Users/hengli/eclipse-workspace/jupiter/src/main/java/db/MySQLTableCreation.java
 /Users/hengli/eclipse-workspace/jupiter/src/main/java/external/GitHubClient.java
 /Users/hengli/eclipse-workspace/jupiter/src/main/java/rpc/RecommendItem.java
+/Users/hengli/eclipse-workspace/jupiter/src/main/java/rpc/ItemHistory.java
 /Users/hengli/eclipse-workspace/jupiter/src/main/java/rpc/RpcHelper.java
+/Users/hengli/eclipse-workspace/jupiter/src/main/java/external/MonkeyLearnClient.java
 /Users/hengli/eclipse-workspace/jupiter/src/main/java/rpc/SearchItem.java
+/Users/hengli/eclipse-workspace/jupiter/src/main/java/db/MySQLConnection.java

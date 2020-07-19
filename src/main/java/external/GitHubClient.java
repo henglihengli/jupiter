@@ -48,12 +48,12 @@ public class GitHubClient {
 	            if (status != 200) {
 	                return new ArrayList<>();
 	            }
-	            HttpEntity entity = response.getEntity();
+	            HttpEntity entity = response.getEntity(); // return HttpEntity
 	            if (entity == null) {
 	            	return new ArrayList<>();
 	            }
-	            String responseBody = EntityUtils.toString(entity);
-	            JSONArray array = new JSONArray(responseBody);
+	            String responseBody = EntityUtils.toString(entity); // convert HttpEntity to String
+	            JSONArray array = new JSONArray(responseBody); // convert String to JSONArray
 	            return getItemList(array);
 	        }
 	    };
