@@ -42,7 +42,7 @@ public class Recommendation {
 			keywordList = keywordList.subList(0, 3);
 		}
 		
-		// Step 3, seach based on keywords, filter out favorite items
+		// Step 3, search based on keywords, filter out favorite items
 		Set<String> visitedItemIds = new HashSet<>();
 		GitHubClient client = new GitHubClient();
 		

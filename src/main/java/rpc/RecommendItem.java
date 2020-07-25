@@ -49,7 +49,7 @@ public class RecommendItem extends HttpServlet {
 		for (Item item : items) {
 			array.put(item.toJSONObject());
 		}
-		RpcHelper.writeJsonArray(response, array);	
+		RpcHelper.writeJsonArray(response, array);
 	}
 
 	/**
