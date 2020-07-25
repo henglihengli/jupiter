@@ -14,8 +14,8 @@ import org.json.JSONObject;
  */
 public class Logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
+
+	/**
      * @see HttpServlet#HttpServlet()
      */
     public Logout() {

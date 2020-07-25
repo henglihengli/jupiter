@@ -92,5 +92,4 @@ public class ItemHistory extends HttpServlet {
 		connection.close();
 		RpcHelper.writeJsonObject(response, new JSONObject().put("result", "SUCCESS"));
 	}
-
 }

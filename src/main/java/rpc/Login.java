@@ -58,6 +58,7 @@ public class Login extends HttpServlet {
 		if (connection.verifyLogin(userId, password)) {
 			HttpSession session = request.getSession();
 			session.setAttribute("user_id", userId);
+			session.setMaxInactiveInterval(3600 * 24 * 10);
 			obj.put("status", "OK").put("user_id", userId).put("name", connection.getFullname(userId));
 		} else {
 			obj.put("status", "Login failed, user id and passcode do not exist");
