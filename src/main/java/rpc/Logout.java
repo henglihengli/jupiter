@@ -9,6 +9,8 @@ import javax.servlet.http.HttpSession;
 
 import org.json.JSONObject;
 
+import db.MySQLConnection;
+
 /**
  * Servlet implementation class Logout
  */
@@ -34,6 +36,7 @@ public class Logout extends HttpServlet {
 		JSONObject obj = new JSONObject();
 		obj.put("status", "Logged out");
 		RpcHelper.writeJsonObject(response, obj);
+		response.sendRedirect("index.html");
 	}
 
 	/**
@@ -43,7 +46,7 @@ public class Logout extends HttpServlet {
 		HttpSession session = request.getSession(false);
 		if (session != null) {
 			session.invalidate();
-		}		
+		}
 		
 		// TODO Auto-generated method stub
 		doGet(request, response);

@@ -13,6 +13,8 @@
 		document.querySelector('#register-btn').addEventListener('click',
 				register);
 		document.querySelector('#login-btn').addEventListener('click', login);
+		document.querySelector('#logout-link').addEventListener('click', 
+				onSessionInvalid);
 		
 		document.querySelector('#nearby-btn').addEventListener('click',
 				loadNearbyItems);
@@ -532,35 +534,6 @@
 		document.querySelector('#register-result').innerHTML = '';
 	}
 
-	function ajax(method, url, data, successCallback, errorCallback) {
-		var xhr = new XMLHttpRequest();
-
-		xhr.open(method, url, true);
-
-		xhr.onload = function() {
-			if (xhr.status === 200) {
-				successCallback(xhr.responseText);
-			} else {
-				errorCallback();
-			}
-		};
-
-		xhr.onerror = function() {
-			console.error("The request couldn't be completed.");
-			errorCallback();
-		};
-
-		if (data === null) {
-			xhr.send();
-		} else {
-			xhr.setRequestHeader("Content-Type",
-					"application/json;charset=utf-8");
-			xhr.send(data);
-		}
-	}
-
-
-
 	// -----------------------------------
 	// Login
 	// -----------------------------------
@@ -595,7 +568,7 @@
 	function showLoginError() {
 		document.querySelector('#login-error').innerHTML = 'Invalid username or password';
 	}
-
+	
 	function ajax(method, url, data, successCallback, errorCallback) {
 		var xhr = new XMLHttpRequest();
 
